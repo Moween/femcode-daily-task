@@ -40,7 +40,7 @@ const calculateEmployeeBonus = () => {
   } else if (age >= 31 && age <= 50) {
     bonus = ((20 / 100) * salary) + salary;
   } else {
-    return 'You are not entitled to a bonus.';
+    return 'Your age is not working age in our register.';
   }
   return `Your bonus is ${bonus}.`;
 };
