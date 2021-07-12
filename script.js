@@ -6,7 +6,7 @@
 // age 21- 30 => 5% of salary + salary;
 // age 31- 50 => 5% of salary + salary;
 
-// checks that salary and year  is a valid input
+// checks if salary and year  is a valid input
 const validateInput = (question) => {
   let value;
   while (true) {
@@ -40,7 +40,7 @@ const calculateEmployeeBonus = () => {
   } else if (age >= 31 && age <= 50) {
     bonus = ((20 / 100) * salary) + salary;
   } else {
-    return 'Your age is not working age in our register.';
+    return 'Your age is not a working age in our register.';
   }
   return `Your bonus is ${bonus}.`;
 };
