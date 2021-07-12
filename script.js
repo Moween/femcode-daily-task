@@ -32,7 +32,7 @@ const validateSalary = () => {
     }
   }
   if (salary) {
-    salary = +salary
+    salary = +salary;
   }
   return salary;
 };
