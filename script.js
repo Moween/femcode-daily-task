@@ -6,40 +6,25 @@
 // age 21- 30 => 5% of salary + salary;
 // age 31- 50 => 5% of salary + salary;
 
-const validateYearInput = () => {
-  let year;
+// checks that salary and year  is a valid input
+const validateInput = (question) => {
+  let value;
   while (true) {
-    year = prompt('Enter your birth year', '');
+    value = question;
 
-    if (year || year === null) {
+    if (value || value === null) {
       break;
     }
   }
-  if (year) {
-    year = +year;
+  if (value) {
+    value = +value;
   }
-  return year;
-};
-
-// checks that salary is a valid input
-const validateSalary = () => {
-  let salary;
-  while (true) {
-    salary = prompt('Enter your monthly income', '');
-
-    if (salary || salary === null) {
-      break;
-    }
-  }
-  if (salary) {
-    salary = +salary;
-  }
-  return salary;
+  return value;
 };
 
 const calculateEmployeeBonus = () => {
-  const userYear = validateYearInput();
-  const salary = validateSalary();
+  const userYear = validateInput(prompt('Enter your birth year:', ''));
+  const salary = validateInput(prompt('Enter your monthly income:', ''));
 
   if (!userYear || !salary) {
     return 'You are not entitled to a bonus.';
