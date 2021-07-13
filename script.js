@@ -42,7 +42,7 @@ const calculateEmployeeBonus = () => {
   return `Your bonus is ${bonus}.`;
 };
 
-alert(calculateEmployeeBonus());
+// alert(calculateEmployeeBonus());
 
 
 // Day 2 Task
@@ -52,7 +52,7 @@ const multipleOfThree = (num) => {
 
   if(num % 3 === 0 || num % 5 === 0 || num % 7 === 0)  {
     for(let i = 1; i <= 20; i++) {
-      arr.push( i * 3)
+      arr.push( i * num)
     }
   }else {
     return `${num} not a multiple`
