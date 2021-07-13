@@ -57,7 +57,7 @@ const multipleOfThree = (num) => {
   }else {
     return `${num} not a multiple`
   }
-  return `Multiples of ${arr}`;
+  return `Multiples of ${num}:  ${arr}`;
 };
 
 console.log(multipleOfThree(3));
