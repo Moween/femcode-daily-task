@@ -10,28 +10,25 @@
 const validateInput = (question) => {
   let value;
   while (true) {
-    value = question;
+    value = prompt(question);
 
-    if (value || value === null) {
+    if (parseInt(value) || value === null) {
       break;
     }
-  }
-  if (value) {
-    value = +value;
   }
   return value;
 };
 
 const calculateEmployeeBonus = () => {
-  const userYear = validateInput(prompt('Enter your birth year:', ''));
-  const salary = validateInput(prompt('Enter your monthly income:', ''));
+  const userYear = validateInput('Enter your birth year:');
+  const salary = validateInput('Enter your monthly income:');
 
   if (!userYear || !salary) {
     return 'You are not entitled to a bonus.';
   }
   // Our maximum age is 50years so current year - 50 will give us the year 1971
   const age = 2021 - userYear;
-  let bonus;
+  let bonus = 0;
 
   if (age >= 18 && age <= 20) {
     bonus = ((5 / 100) * salary) + salary;
@@ -45,4 +42,4 @@ const calculateEmployeeBonus = () => {
   return `Your bonus is ${bonus}.`;
 };
 
-calculateEmployeeBonus();
+alert(calculateEmployeeBonus());
