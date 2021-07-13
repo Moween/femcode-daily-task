@@ -49,11 +49,13 @@ alert(calculateEmployeeBonus());
 
 const multipleOfThree = (num) => {
   const arr = [];
-  
+
   if(num % 3 === 0 || num % 5 === 0 || num % 7 === 0)  {
     for(let i = 1; i <= 20; i++) {
       arr.push( i * 3)
     }
+  }else {
+    return 'Number not a multiple'
   }
   return arr;
 };
