@@ -64,7 +64,7 @@ const calculateEmployeeBonus = () => {
 // .
 // 3*20 = 60
 
-const multipleOfThree = (num) => {
+const getMultiple = (num) => {
   const arr = [];
 
   if(num % 3 === 0 || num % 5 === 0 || num % 7 === 0)  {
@@ -77,4 +77,4 @@ const multipleOfThree = (num) => {
   return `Multiples of ${num}:  ${arr}`;
 };
 
-console.log(multipleOfThree(3));
+console.log(getMultiple(3));
