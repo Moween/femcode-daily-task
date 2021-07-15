@@ -98,8 +98,8 @@ const getMultiple = (num) => {
 
 
 
-const checkVotersELigibility = (dateOfBirth) => {
-  // let dateOfBirth = prompt('Enter DOB \ndd/mm/yy:');
+const checkVotersELigibility = () => {
+  let dateOfBirth = prompt('Enter DOB \ndd/mm/yy:');
   dateOfBirth = dateOfBirth.split('/');
   const dayOfBirth = parseInt(dateOfBirth[0]);
   const monthOfBirth = parseInt(dateOfBirth[1]);
@@ -127,5 +127,5 @@ const checkVotersELigibility = (dateOfBirth) => {
   
 }
 
-console.log(checkVotersELigibility('01/05/2003'));
+console.log(checkVotersELigibility());
 
