@@ -78,3 +78,53 @@ const getMultiple = (num) => {
 };
 
 console.log(getMultiple(3));
+
+
+// Day3 task
+// ===
+
+// Write a program to determine if a person is eligible for voting or note
+
+// Note: voting age is 18 years
+
+// User enters date of birth in a prompt in the format : dd/mm/yyyy
+
+// ===
+// Validation check : it the user is to be 18 years of age by tomorrow it simply means the person cannot vote today
+
+// Meaning you are calculating the persons age down to the day 
+
+// Not just using the year alone
+
+
+
+const checkVotersELigibility = () => {
+  let dateOfBirth = prompt('Enter DOB \ndd/mm/yy:');
+  dateOfBirth = dateOfBirth.split('/');
+  const dayOfBirth = parseInt(dateOfBirth[0]);
+  const monthOfBirth = parseInt(dateOfBirth[1]);
+  const yearOfBirth = parseInt(dateOfBirth[2]);
+  
+  const now = new Date();
+  const currentDay = now.getDay();
+  const currentMonth = now.getMonth() + 1;
+  console.log(currentMonth)
+  const currYear = now.getFullYear();
+  
+  const age = currYear - yearOfBirth;
+  console.log('User\'s age', age)
+
+  if(age === 18 && currentMonth < monthOfBirth) {
+    return 'Not Eligible to vote';
+  }else if (age === 18 && dayOfBirth > currentDay) {
+    return 'Not Eligible to vote';
+  } else if(age < 18) {
+    return 'Not eligible to vote';
+  }
+
+  return 'Eligible to vote';
+  
+}
+
+console.log(checkVotersELigibility());
+
