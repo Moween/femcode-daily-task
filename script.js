@@ -77,7 +77,7 @@ const getMultiple = (num) => {
   return `Multiples of ${num}:  ${arr}`;
 };
 
-console.log(getMultiple(3));
+// console.log(getMultiple(3));
 
 
 // Day3 task
@@ -98,15 +98,16 @@ console.log(getMultiple(3));
 
 
 
-const checkVotersELigibility = () => {
-  let dateOfBirth = prompt('Enter DOB \ndd/mm/yy:');
+const checkVotersELigibility = (dateOfBirth) => {
+  // let dateOfBirth = prompt('Enter DOB \ndd/mm/yy:');
   dateOfBirth = dateOfBirth.split('/');
   const dayOfBirth = parseInt(dateOfBirth[0]);
   const monthOfBirth = parseInt(dateOfBirth[1]);
+  console.log(monthOfBirth)
   const yearOfBirth = parseInt(dateOfBirth[2]);
   
   const now = new Date();
-  const currentDay = now.getDay();
+  const currentDay = now.getDate();
   const currentMonth = now.getMonth() + 1;
   console.log(currentMonth)
   const currYear = now.getFullYear();
@@ -126,5 +127,5 @@ const checkVotersELigibility = () => {
   
 }
 
-console.log(checkVotersELigibility());
+console.log(checkVotersELigibility('01/05/2003'));
 
