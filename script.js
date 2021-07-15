@@ -103,17 +103,14 @@ const checkVotersELigibility = () => {
   dateOfBirth = dateOfBirth.split('/');
   const dayOfBirth = parseInt(dateOfBirth[0]);
   const monthOfBirth = parseInt(dateOfBirth[1]);
-  console.log(monthOfBirth)
   const yearOfBirth = parseInt(dateOfBirth[2]);
   
   const now = new Date();
   const currentDay = now.getDate();
   const currentMonth = now.getMonth() + 1;
-  console.log(currentMonth)
   const currYear = now.getFullYear();
   
   const age = currYear - yearOfBirth;
-  console.log('User\'s age', age)
 
   if(age === 18 && currentMonth < monthOfBirth) {
     return 'Not Eligible to vote';
